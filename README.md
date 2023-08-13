@@ -8,7 +8,7 @@ To add an action into Snapper 3, you as a developer needs to do the following:
 
 ## Protocol
 
-```
+```objective-c
 @protocol Snapper3Plugin <NSObject>
 
 @required
@@ -34,7 +34,7 @@ To add an action into Snapper 3, you as a developer needs to do the following:
 
 And this is the interface Snapper 3 provides as of 1.1
 
-```
+```objective-c
 @interface Snapper3PluginManager: NSObject
 +(Snapper3PluginManager*)sharedInstance;
 -(void)registerPlugin:(id<Snapper3Plugin>)plugin;
@@ -55,7 +55,7 @@ You should register your plugin into Snapper 3 after the device starts up, see t
 
 This plugin is the plugin which is actually bundled into Snapper 3 1.1. It saves an image into the Photos app and opens a deep link to an app.
 
-```
+```objective-c
 @interface SnapperDAMAAppPlugin: NSObject <Snapper3Plugin> @end
 
 ---
@@ -86,7 +86,7 @@ This plugin is the plugin which is actually bundled into Snapper 3 1.1. It saves
 
 And here is how you can register it into Snapper 3
 
-```
+```objective-c
 static inline void initializeTweak(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {
     // Wait a bit to ensure Snapper 3 is loaded
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
