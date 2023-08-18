@@ -6,6 +6,10 @@ To add an action into Snapper 3, you as a developer needs to do the following:
 - Provide icons and descriptions
 - Register it into Snapper 3's plugin manager during runtime, after the system as loaded (optimally after a small delay as well)
 
+## Requirements
+
+- This will only work on version 1.1.1 and up
+
 ## Protocol
 
 ```objective-c
