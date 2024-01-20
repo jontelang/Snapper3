@@ -113,3 +113,15 @@ static inline void initializeTweak(CFNotificationCenterRef center, void *observe
 ```
 
 And that should be it.
+
+# Notifications
+
+If you're building your own tweaks and want to control Snapper 3, you can use these notifications. I believe they are more or less self explanatory.
+
+- com.jontelang.snapper3.history
+- com.jontelang.snapper3.force.open
+- com.jontelang.snapper3.forceinstant.open
+- com.jontelang.snapper3.forcefreeze.open
+- com.jontelang.snapper3.close.all
+- com.jontelang.snapper3.closecrop
+- com.jontelang.snapper3.openlast
